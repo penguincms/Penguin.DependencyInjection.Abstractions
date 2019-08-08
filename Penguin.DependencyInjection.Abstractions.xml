@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penguin.DependencyInjection.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Penguin.DependencyInjection.Abstractions.IRegisterDependencies">
+            <summary>
+            Denotes that this class should be used by the Penguin DI Engine to register dependencies on initialization
+            </summary>
+        </member>
+        <member name="M:Penguin.DependencyInjection.Abstractions.IRegisterDependencies.RegisterDependencies">
+            <summary>
+            A method that actually calls the static instance of the Penguin DI engine to register the instances
+            </summary>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.IRegisterMostDerived">
+            <summary>
+            When implemented, the Penguin DI system will return a transient instance of the most derived class that inherits from this one, if the class is not registered when requested
+            This is useful for ensuring that consuming library implementations of a class are always selected over the class that defines this
+            </summary>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.ISelfRegistering">
+            <summary>
+            When implemented, the Penguin DI system will create a transient instance of the object if it is unregistered when it is requested
+            </summary>
+        </member>
+    </members>
+</doc>
