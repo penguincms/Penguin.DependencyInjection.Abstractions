@@ -5,13 +5,9 @@
     /// </summary>
     public interface IRegisterDependencies
     {
-        #region Methods
-
         /// <summary>
         /// A method that actually calls the static instance of the Penguin DI engine to register the instances
         /// </summary>
         void RegisterDependencies();
-
-        #endregion Methods
     }
 }
