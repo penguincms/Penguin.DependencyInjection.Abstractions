@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Penguin.DependencyInjection.Abstractions</name>
+    </assembly>
+    <members>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute">
+            <summary>
+            Allows attributing a class so that the DI automatically registers it to itself with the given Service Provider type
+            </summary>
+        </member>
+        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.ServiceProvider">
+            <summary>
+            The type of the service provider that should be used to resolve this class
+            </summary>
+        </member>
+        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.RegisteredTypes">
+            <summary>
+            The types that should resolve to this class
+            </summary>
+        </member>
+        <member name="M:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.#ctor(System.Type,System.Type[])">
+            <summary>
+            Constructs a new instance of this attribute
+            </summary>
+            <param name="serviceProvider">The type of the service provider that should be used to resolve this class</param>
+            <param name="registeredTypes">The types that should resolve to this class</param>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies">
+            <summary>
+            Denotes that this class should be used by the Penguin DI Engine to register dependencies on initialization
+            </summary>
+        </member>
+        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies.RegisterDependencies">
+            <summary>
+            A method that actually calls the static instance of the Penguin DI engine to register the instances
+            </summary>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterMostDerived">
+            <summary>
+            When implemented, the Penguin DI system will return a transient instance of the most derived class that inherits from this one, if the class is not registered when requested
+            This is useful for ensuring that consuming library implementations of a class are always selected over the class that defines this
+            </summary>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.ISelfRegistering">
+            <summary>
+            When implemented, the Penguin DI system will create a transient instance of the object if it is unregistered when it is requested
+            </summary>
+        </member>
+    </members>
+</doc>
