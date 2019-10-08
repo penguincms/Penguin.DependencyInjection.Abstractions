@@ -4,34 +4,51 @@
         <name>Penguin.DependencyInjection.Abstractions</name>
     </assembly>
     <members>
-        <member name="T:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute">
+        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.DependencyRegistrationAttribute.Lifetime">
+            <summary>
+            The lifetime of the object returned
+            </summary>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Attributes.RegisterAttribute">
             <summary>
             Allows attributing a class so that the DI automatically registers it to itself with the given Service Provider type
             </summary>
         </member>
-        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.ServiceProvider">
-            <summary>
-            The type of the service provider that should be used to resolve this class
-            </summary>
-        </member>
-        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.RegisteredTypes">
+        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.RegisterAttribute.RegisteredTypes">
             <summary>
             The types that should resolve to this class
             </summary>
         </member>
-        <member name="M:Penguin.DependencyInjection.Abstractions.Attributes.ServiceProviderAttribute.#ctor(System.Type,System.Type[])">
+        <member name="M:Penguin.DependencyInjection.Abstractions.Attributes.RegisterAttribute.#ctor(Microsoft.Extensions.DependencyInjection.ServiceLifetime,System.Type[])">
             <summary>
             Constructs a new instance of this attribute
             </summary>
-            <param name="serviceProvider">The type of the service provider that should be used to resolve this class</param>
+            <param name="lifetime">The lifetime of the object returned</param>
             <param name="registeredTypes">The types that should resolve to this class</param>
+        </member>
+        <member name="T:Penguin.DependencyInjection.Abstractions.Attributes.RegisterThroughMostDerivedAttribute">
+            <summary>
+            Registers the most derived type from this class, over and through the provided type, using the given service provider
+            </summary>
+        </member>
+        <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.RegisterThroughMostDerivedAttribute.RequestType">
+            <summary>
+            The type that will be requested by the service provider
+            </summary>
+        </member>
+        <member name="M:Penguin.DependencyInjection.Abstractions.Attributes.RegisterThroughMostDerivedAttribute.#ctor(System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime)">
+            <summary>
+            Constructs a new instance of this attribute
+            </summary>
+            <param name="requestType">The type that will be requested by the service provider</param>
+            <param name="lifetime">The lifetime of the object returned</param>
         </member>
         <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies">
             <summary>
             Denotes that this class should be used by the Penguin DI Engine to register dependencies on initialization
             </summary>
         </member>
-        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies.RegisterDependencies">
+        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies.RegisterDependencies(System.Action{System.Type,System.Type,Microsoft.Extensions.DependencyInjection.ServiceLifetime})">
             <summary>
             A method that actually calls the static instance of the Penguin DI engine to register the instances
             </summary>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,12 +9,8 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
     /// Allows attributing a class so that the DI automatically registers it to itself with the given Service Provider type
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class ServiceProviderAttribute : Attribute
+    public class RegisterAttribute : DependencyRegistrationAttribute
     {
-        /// <summary>
-        /// The type of the service provider that should be used to resolve this class
-        /// </summary>
-        public Type ServiceProvider { get; set; }
 
         /// <summary>
         /// The types that should resolve to this class
@@ -23,11 +20,10 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         /// <summary>
         /// Constructs a new instance of this attribute
         /// </summary>
-        /// <param name="serviceProvider">The type of the service provider that should be used to resolve this class</param>
+        /// <param name="lifetime">The lifetime of the object returned</param>
         /// <param name="registeredTypes">The types that should resolve to this class</param>
-        public ServiceProviderAttribute(Type serviceProvider, params Type[] registeredTypes)
+        public RegisterAttribute(ServiceLifetime lifetime, params Type[] registeredTypes) : base(lifetime)
         {
-            ServiceProvider = serviceProvider;
             RegisteredTypes = registeredTypes;
         }
     }
