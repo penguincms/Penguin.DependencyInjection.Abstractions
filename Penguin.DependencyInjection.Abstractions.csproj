@@ -4,6 +4,6 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.DependencyInjection.Abstractions</PackageProjectUrl>
     <Description>Interfaces for the Penguin Dependency Injection system</Description>
-    <Version>2.1.3</Version>
+    <Version>2.1.5</Version>
   </PropertyGroup>
 </Project>

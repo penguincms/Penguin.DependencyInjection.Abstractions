@@ -74,28 +74,16 @@
             Specifies that a new instance of the service will be created every time it is
             </summary>
         </member>
-        <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IConsolidateDependencies`2">
+        <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IConsolidateDependencies`1">
             <summary>
             Marks a class as being capable of squashing multiple registered instances into a single instance of the registered type, intended for ListProviders that have their own internal logic about prioritizing dependency usage
             </summary>
             <typeparam name="TDependency">The type of provider that this class consolidates</typeparam>
-            <typeparam name="TInstantiation">The type of provider that this class consolidates</typeparam>
         </member>
-        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IConsolidateDependencies`2.Construct">
+        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IConsolidateDependencies`1.Consolidate(System.Collections.Generic.IEnumerable{`0})">
             <summary>
-            Construct a new instance of the consolidating class. This is called before the children are 
-            instantiated in the event that one of the childred indirectly requires a TDependency, so that an instance 
-            can exist before resolution is called so that we dont have a 
+            Squash the list down
             </summary>
-            <returns></returns>
-        </member>
-        <member name="M:Penguin.DependencyInjection.Abstractions.Interfaces.IConsolidateDependencies`2.Populate(`1,System.Collections.Generic.IEnumerable{`0})">
-            <summary>
-            Squashes a list of registered instances down to a single consolidated instance
-            </summary>
-            <param name="instantiation">The previously constructed instance of this consolidator, ready to be filled</param>
-            <param name="Instances">The IEnumerable of existing instances returned by the DI</param>
-            <returns>A single squashed instance that uses all of the existing DI instances</returns>
         </member>
         <member name="T:Penguin.DependencyInjection.Abstractions.Interfaces.IRegisterDependencies">
             <summary>
