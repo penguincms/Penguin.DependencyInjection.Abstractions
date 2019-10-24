@@ -1,0 +1,12 @@
+Penguin.Cms.Abstractions
+Penguin.Cms.Web.Pages
+Penguin.Cms.Web.Security.Services
+Penguin.DependencyInjection
+Penguin.Email
+Penguin.Files
+Penguin.Persistence.DependencyInjection
+Penguin.Persistence.EntityFramework
+Penguin.Persistence.Repositories
+Penguin.Persistence.Repositories.EntityFramework
+Penguin.Web.Email.Templating
+Penguin.Web.Mvc
