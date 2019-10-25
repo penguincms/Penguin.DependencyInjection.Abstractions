@@ -1,4 +1,5 @@
 Penguin.Cms.Abstractions
+Penguin.Cms.Configuration
 Penguin.Cms.Web.Pages
 Penguin.Cms.Web.Security.Services
 Penguin.DependencyInjection
