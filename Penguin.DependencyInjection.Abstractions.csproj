@@ -5,5 +5,7 @@
     <PackageProjectUrl>https://github.com/penguincms/Penguin.DependencyInjection.Abstractions</PackageProjectUrl>
     <Description>Interfaces for the Penguin Dependency Injection system</Description>
     <Version>2.1.5</Version>
+    <AssemblyName>Penguin.DependencyInjection.Abstractions</AssemblyName>
+    <RootNamespace>Penguin.DependencyInjection.Abstractions</RootNamespace>
   </PropertyGroup>
 </Project>
