@@ -7,5 +7,6 @@
     <Version>2.1.5</Version>
     <AssemblyName>Penguin.DependencyInjection.Abstractions</AssemblyName>
     <RootNamespace>Penguin.DependencyInjection.Abstractions</RootNamespace>
+    <DocumentationFile>Penguin.DependencyInjection.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
 </Project>
