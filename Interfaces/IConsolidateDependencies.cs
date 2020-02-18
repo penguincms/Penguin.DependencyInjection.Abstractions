@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Penguin.DependencyInjection.Abstractions.Interfaces
 {
@@ -10,12 +8,9 @@ namespace Penguin.DependencyInjection.Abstractions.Interfaces
     /// <typeparam name="TDependency">The type of provider that this class consolidates</typeparam>
     public interface IConsolidateDependencies<TDependency>
     {
-
         /// <summary>
         /// Squash the list down
         /// </summary>
         TDependency Consolidate(IEnumerable<TDependency> dependencies);
-
-
     }
 }

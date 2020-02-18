@@ -4,7 +4,7 @@ using System;
 namespace Penguin.DependencyInjection.Abstractions.Attributes
 {
     /// <summary>
-    /// The base class for attributes that the DI should look for 
+    /// The base class for attributes that the DI should look for
     /// </summary>
     public abstract class DependencyRegistrationAttribute : Attribute
     {

@@ -9,7 +9,6 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
     [AttributeUsage(AttributeTargets.Class)]
     public class RegisterAttribute : DependencyRegistrationAttribute
     {
-
         /// <summary>
         /// The types that should resolve to this class
         /// </summary>
@@ -26,4 +25,3 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         }
     }
 }
-

@@ -6,7 +6,7 @@
     <members>
         <member name="T:Penguin.DependencyInjection.Abstractions.Attributes.DependencyRegistrationAttribute">
             <summary>
-            The base class for attributes that the DI should look for 
+            The base class for attributes that the DI should look for
             </summary>
         </member>
         <member name="P:Penguin.DependencyInjection.Abstractions.Attributes.DependencyRegistrationAttribute.Lifetime">
