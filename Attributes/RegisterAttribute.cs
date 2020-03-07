@@ -21,7 +21,7 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         /// <param name="registeredTypes">The types that should resolve to this class</param>
         public RegisterAttribute(ServiceLifetime lifetime, params Type[] registeredTypes) : base(lifetime)
         {
-            RegisteredTypes = registeredTypes;
+            this.RegisteredTypes = registeredTypes;
         }
     }
 }

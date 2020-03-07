@@ -19,7 +19,7 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         /// <param name="lifetime">The lifetime of the instantiated dependency</param>
         public DependencyRegistrationAttribute(ServiceLifetime lifetime)
         {
-            Lifetime = lifetime;
+            this.Lifetime = lifetime;
         }
     }
 }

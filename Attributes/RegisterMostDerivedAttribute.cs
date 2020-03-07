@@ -21,7 +21,7 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         /// <param name="lifetime">The lifetime of the object returned</param>
         public RegisterThroughMostDerivedAttribute(Type requestType, ServiceLifetime lifetime) : base(lifetime)
         {
-            RequestType = requestType;
+            this.RequestType = requestType;
         }
     }
 }
