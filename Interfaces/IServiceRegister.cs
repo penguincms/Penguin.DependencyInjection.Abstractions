@@ -28,7 +28,6 @@ namespace Penguin.DependencyInjection.Abstractions.Interfaces
         /// Registers TRegistration to TImplementation, and uses the provided Func to generate the result
         /// </summary>
         /// <typeparam name="TRegistration">The type that will be requested</typeparam>
-        /// <typeparam name="TImplementation">The type that will be returned</typeparam>
         /// <param name="RetrieveInstance">The function that generates the result</param>
         /// <param name="serviceLifetime">The lifetime of the instance returned</param>
         void Register<TRegistration>(Func<IServiceProvider, TRegistration> RetrieveInstance, ServiceLifetime serviceLifetime);
