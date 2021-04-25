@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageProjectUrl>https://github.com/penguincms/Penguin.DependencyInjection.Abstractions</PackageProjectUrl>
     <Description>Interfaces for the Penguin Dependency Injection system</Description>
-    <Version>5.0.1</Version>
+    <Version>5.0.5</Version>
     <AssemblyName>Penguin.DependencyInjection.Abstractions</AssemblyName>
     <RootNamespace>Penguin.DependencyInjection.Abstractions</RootNamespace>
     <DocumentationFile>Penguin.DependencyInjection.Abstractions.xml</DocumentationFile>
