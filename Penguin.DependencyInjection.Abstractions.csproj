@@ -2,7 +2,7 @@
   <Import Project="Penguin.Projects.Shared\Penguin.Projects.Shared.csproj" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <PackageProjectUrl>https://github.com/penguincms/Penguin.DependencyInjection.Abstractions</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/PenguinCMS/Penguin.DependencyInjection.Abstractions</PackageProjectUrl>
     <Description>Interfaces for the Penguin Dependency Injection system</Description>
     <Version>5.0.5</Version>
     <AssemblyName>Penguin.DependencyInjection.Abstractions</AssemblyName>
