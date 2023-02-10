@@ -7,12 +7,12 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
     /// Allows attributing a class so that the DI automatically registers it to itself with the given Service Provider type
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class RegisterAttribute : DependencyRegistrationAttribute
+    public sealed class RegisterAttribute : DependencyRegistrationAttribute
     {
         /// <summary>
         /// The types that should resolve to this class
         /// </summary>
-        public Type[] RegisteredTypes { get; set; }
+        public Type[] RegisteredTypes { get; internal set; }
 
         /// <summary>
         /// Constructs a new instance of this attribute
@@ -21,7 +21,7 @@ namespace Penguin.DependencyInjection.Abstractions.Attributes
         /// <param name="registeredTypes">The types that should resolve to this class</param>
         public RegisterAttribute(ServiceLifetime lifetime, params Type[] registeredTypes) : base(lifetime)
         {
-            this.RegisteredTypes = registeredTypes;
+            RegisteredTypes = registeredTypes;
         }
     }
 }
